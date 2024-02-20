@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { FC } from "react";
+import cn from "./util/cn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={inter.className}>
+        <nav className="flex-1">
+          <ul className="flex flex-1">
+            <MenuItem name="Coffee" className="font-cafeTitle" href="/coffee" />
+            <MenuItem name="Bar" className="font-bar" href="/bar" />
+          </ul>
+        </nav>
+        <main className="flex">{children}</main>
+      </body>
     </html>
   );
 }
+
+const MenuItem: FC<{ name: string; href: string; className: string }> = ({
+  name,
+  className,
+  href,
+}) => {
+  return (
+    <li className={cn("p-2 bg-red-400", className)}>
+      <a href={href}>{name}</a>
+    </li>
+  );
+};
