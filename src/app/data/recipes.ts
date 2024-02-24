@@ -3,7 +3,7 @@ import { CoffeeIngredients as CI } from "./ingredients";
 
 export const BarRecipes = {
   mojito: [BI.RUM, BI.MINT, BI.LIME, BI.SUGAR, BI.SODA],
-};
+} as const;
 
 export const CoffeeRecipes = {
   espresso: [CI.ESPRESSO],
@@ -16,4 +16,4 @@ export const CoffeeRecipes = {
   iced_latte: [CI.ESPRESSO, CI.MILK],
   americano: [CI.COFFEE],
   affogato: [CI.ESPRESSO, CI.ICE_CREAM],
-};
+} as const;

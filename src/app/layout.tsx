@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { FC } from "react";
 import cn from "./util/cn";
+import { NavItemProps } from "./components/nav/types";
+import Nav from "./components/nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +18,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const navItems: NavItemProps[] = [
+    { name: "Coffee", href: "/coffee", className: "font-cafeTitle" },
+    { name: "Bar", href: "/bar", className: "font-bar" },
+  ];
+
   return (
     <html lang="en">
       <head>
@@ -32,25 +39,10 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <nav className="flex-1">
-          <ul className="flex flex-1">
-            <MenuItem name="Coffee" className="font-cafeTitle" href="/coffee" />
-            <MenuItem name="Bar" className="font-bar" href="/bar" />
-          </ul>
+          <Nav items={navItems} />
         </nav>
         <main className="flex">{children}</main>
       </body>
     </html>
   );
 }
-
-const MenuItem: FC<{ name: string; href: string; className: string }> = ({
-  name,
-  className,
-  href,
-}) => {
-  return (
-    <li className={cn("p-2 bg-red-400", className)}>
-      <a href={href}>{name}</a>
-    </li>
-  );
-};
