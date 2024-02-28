@@ -8,10 +8,7 @@ const Coffee: React.FC = () => {
       <h1>Coffee</h1>
       <p>Some coffee stuff</p>
       {Object.entries(CoffeeRecipes).map((items) => (
-        <MenuItem
-          name={items[0]}
-          ingredients={items[1].map((e) => CoffeeIngredients[e])}
-        />
+        <MenuItem name={items[0]} recipe={items[1]} />
       ))}
     </div>
   );
