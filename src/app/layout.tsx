@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const navItems: NavItemProps[] = [
-    { name: "Coffee", href: "/coffee", className: "font-cafeTitle" },
+    { name: "Coffee", href: "/", className: "font-cafeTitle" },
     { name: "Bar", href: "/bar", className: "font-bar" },
   ];
 

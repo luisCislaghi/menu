@@ -11,9 +11,9 @@ const NavItem: FC<NavItemProps> = ({
   return (
     <li
       className={cn(
-        "p-2 bg-red-400",
+        "p-2 bg-yellow-50",
         {
-          active: active,
+          "bg-green-200": active,
         },
         className
       )}
