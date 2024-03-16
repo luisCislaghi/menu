@@ -16,8 +16,8 @@ const config: Config = {
         200: "#E6CCB2",
         300: "#DDB892",
         400: "#B08968",
-        500: "#7F5539",
-        600: "#9C6644",
+        500: "#9C6644",
+        600: "#7F5539",
       },
       bar: {
         moss: "#606c38",
@@ -29,10 +29,10 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        cafeTitle: ["Meta\\ Serif", "Inter"],
-        cafeBody: ["Montserrat", ...defaultTheme.fontFamily.sans],
-        barTitle: ["Akkurat", ...defaultTheme.fontFamily.sans],
-        barBody: ["Akkurat", ...defaultTheme.fontFamily.sans],
+        "cafe-title": ["Meta\\ Serif", "Inter"],
+        "cafe-body": ["Montserrat", ...defaultTheme.fontFamily.sans],
+        "bar-title": ["Akkurat", ...defaultTheme.fontFamily.sans],
+        "bar-body": ["Akkurat", ...defaultTheme.fontFamily.sans],
       },
     },
   },

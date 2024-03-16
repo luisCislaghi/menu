@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // to output static files when building
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/coffee",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

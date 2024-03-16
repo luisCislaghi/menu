@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const navItems: NavItemProps[] = [
-    { name: "Coffee", href: "/", className: "font-cafeTitle" },
+    { name: "Coffee", href: "/", className: "font-cafe-title" },
     { name: "Bar", href: "/bar", className: "font-bar" },
   ];
 
@@ -38,9 +38,9 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <nav className="flex-1">
+        {/* <nav className="flex-1">
           <Nav items={navItems} />
-        </nav>
+        </nav> */}
         <main className="flex">{children}</main>
       </body>
     </html>

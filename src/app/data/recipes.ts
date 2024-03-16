@@ -23,63 +23,63 @@ export const CoffeeRecipes: RecipeGroup = {
   hot: {
     espresso: {
       title: "Espresso",
-      description: "A full-flavored, concentrated form of coffee.",
+      description: "Café intenso, dose dupla",
       ingredients: [CI.ESPRESSO],
     },
     v60: {
       title: "V60",
-      description:
-        "A method of coffee brewing that uses a cone-shaped dripper.",
+      description: "Café suave, método de coado japonês",
       ingredients: [CI.COFFEE],
     },
     aeropress: {
       title: "Aeropress",
-      description: "Brewed coffee by infusion and little pressure.",
+      description: "Café encorpado, com um final limpo",
       ingredients: [CI.COFFEE],
     },
     cappuccino: {
       title: "Cappuccino",
-      description:
-        "Espresso, steamed milk foam and cocoa powder/cinnamon powder.",
+      description: "Espresso forte com leite vaporizado e coberto com espuma",
       ingredients: [CI.ESPRESSO, CI.MILK, CI.COCOA_POWDER],
     },
     latte: {
       title: "Latte",
-      description: "Espresso and steamed milk.",
+      description:
+        "Espresso cremoso com leite vaporizado, perfeito para um sabor mais suave",
       ingredients: [CI.ESPRESSO, CI.MILK],
     },
     flat_white: {
       title: "Flat White",
-      description: "Espresso and steamed milk.",
+      description:
+        "Espresso suave com leite vaporizado aveludado, menos espumoso que um latte",
       ingredients: [CI.ESPRESSO, CI.MILK],
     },
 
     americano: {
       title: "Americano",
-      description: "Espresso with added hot water.",
+      description: "Espresso forte diluído em água quente",
       ingredients: [CI.COFFEE],
     },
   },
   cold: {
-    iced_latte_caramel: {
-      title: "Iced Caramel Latte",
-      description: "A cold coffee drink made with espresso, milk, and caramel.",
-      ingredients: [CI.ESPRESSO, CI.MILK, CI.CARAMEL],
-    },
     iced_latte: {
       title: "Iced Latte",
-      description: "A cold coffee drink made with espresso and chilled milk.",
+      description: "Espresso gelado com leite",
       ingredients: [CI.ESPRESSO, CI.MILK],
+    },
+    iced_latte_caramel: {
+      title: "Iced Caramel Latte",
+      description: "Espresso gelado com leite e um toque de caramelo",
+      ingredients: [CI.ESPRESSO, CI.MILK, CI.CARAMEL],
     },
     iced_americano: {
       title: "Iced Americano",
-      description: "Espresso with added cold water and ice.",
+      description: "Espresso gelado diluído em água",
       ingredients: [CI.COFFEE],
     },
     affogato: {
       title: "Affogato",
       description:
-        'A coffee-based dessert. Vanilla gelato "drowned" with a shot of hot espresso.',
+        'Uma bola de gelatto de baunilha "afogada" em um shot de espresso quente',
       ingredients: [CI.ESPRESSO, CI.ICE_CREAM],
     },
   },

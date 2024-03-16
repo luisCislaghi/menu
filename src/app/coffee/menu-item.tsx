@@ -10,13 +10,12 @@ const MenuItem: React.FC<{ name: string; recipe: Recipe }> = ({
   name,
   recipe,
 }) => {
-  const theme = useContext(ThemeContext);
   return (
-    <div key={name} className={cn(" mb-2  border-stone-400", theme.colorText)}>
-      <h3 className={cn("font-semibold", theme.fontTitle)}>
+    <div key={name} className={cn(" mb-2  border-stone-400")}>
+      <h3 className={cn("text-lg font-cafe-title font-semibold")}>
         {titleCase(recipe.title)}
       </h3>
-      <p className={cn(" flex gap-2", theme.fontBody)}>{recipe.description}</p>
+      <p className={cn(" flex gap-2 font-cafe-body")}>{recipe.description}</p>
     </div>
   );
 };

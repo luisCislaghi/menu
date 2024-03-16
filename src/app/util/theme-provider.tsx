@@ -3,8 +3,8 @@
 import React, { createContext, FC } from "react";
 
 const DEFAULT_THEME = {
-  fontTitle: "font-cafeTitle",
-  fontBody: "font-cafeBody",
+  fontTitle: "font-cafe-title",
+  fontBody: "font-cafe-body",
   colorBg: "bg-cafe-50",
   colorText: "text-cafe-600",
 };
