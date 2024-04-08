@@ -28,11 +28,13 @@ const Answare: React.FC<{ node: AnswareNode }> = ({ node }) => {
   };
 
   return (
-    <div key={node.value}>
-      <button className="bg-cafe-500" onClick={() => handleAnsware(node)}>
-        {node.value}
-      </button>
-    </div>
+    <button
+      key={node.value}
+      className="grow p-4 border rounded"
+      onClick={() => handleAnsware(node)}
+    >
+      {node.value}
+    </button>
   );
 };
 

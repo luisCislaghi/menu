@@ -5,6 +5,8 @@ import { AnswareNode, QuestionNode, ResultCount, tree } from "./types";
 import Question from "./question";
 import { setHistory, setQuestion, setResult } from "../../lib/guide-slice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { IconArrowBackUp } from "@tabler/icons-react";
+import Result from "./result";
 
 const Guide: React.FC = () => {
   const { result, question, history } = useAppSelector((state) => state.guide);
@@ -39,18 +41,15 @@ const Guide: React.FC = () => {
   };
 
   return (
-    <div>
-      {!question
-        ? Object.keys(result).map((key) => (
-            <>
-              {key} - {result[key]}
-              <br />
-            </>
-          ))
-        : renderQuestion(question)}
-      {(history.length > 0 || !question) && (
-        <button onClick={handleBack}>Back</button>
-      )}
+    <div className="flex-1">
+      <div className="flex-1 mb-1 p-2">
+        {history.length > 0 && (
+          <button className="flex gap-2 align-middle" onClick={handleBack}>
+            <IconArrowBackUp /> Back
+          </button>
+        )}
+      </div>
+      {!question ? <Result /> : renderQuestion(question)}
     </div>
   );
 };
