@@ -5,6 +5,7 @@ import { FC } from "react";
 import cn from "./util/cn";
 import { NavItemProps } from "./components/nav/types";
 import Nav from "./components/nav";
+import StoreProvider from "./StoreProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,10 +39,12 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        {/* <nav className="flex-1">
+        <StoreProvider>
+          {/* <nav className="flex-1">
           <Nav items={navItems} />
         </nav> */}
-        <main className="flex">{children}</main>
+          <main className="flex">{children}</main>
+        </StoreProvider>
       </body>
     </html>
   );
