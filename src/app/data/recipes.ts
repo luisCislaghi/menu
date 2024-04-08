@@ -53,7 +53,6 @@ export const CoffeeRecipes: RecipeGroup = {
         "Espresso suave com leite vaporizado aveludado, menos espumoso que um latte",
       ingredients: [CI.ESPRESSO, CI.MILK],
     },
-
     americano: {
       title: "Americano",
       description: "Espresso forte diluído em água quente",
@@ -76,11 +75,43 @@ export const CoffeeRecipes: RecipeGroup = {
       description: "Espresso gelado diluído em água",
       ingredients: [CI.COFFEE],
     },
+    espresso_tonic: {
+      title: "Espresso Tonic",
+      description: "Espresso gelado com água tônica",
+      ingredients: [CI.ESPRESSO, CI.TONIC],
+    },
+    espresso_tonic_tangerine: {
+      title: "Espresso Tonic",
+      description: "Espresso gelado com água tônica e essência de tangerina",
+      ingredients: [CI.ESPRESSO, CI.TONIC],
+    },
     affogato: {
       title: "Affogato",
       description:
         'Uma bola de gelatto de baunilha "afogada" em um shot de espresso quente',
       ingredients: [CI.ESPRESSO, CI.ICE_CREAM],
+    },
+  },
+  not_coffee: {
+    hot_chocolate: {
+      title: "Hot Chocolate",
+      description: "Chocolate quente cremoso",
+      ingredients: [CI.COCOA_POWDER, CI.MILK],
+    },
+    iced_chocolate: {
+      title: "Iced Chocolate",
+      description: "Chocolate gelado cremoso",
+      ingredients: [CI.COCOA_POWDER, CI.MILK],
+    },
+    chai_latte: {
+      title: "Chai Latte",
+      description: "Chá indiano com leite vaporizado",
+      ingredients: [CI.MILK],
+    },
+    matcha_latte: {
+      title: "Matcha Latte",
+      description: "Chá verde em pó com leite vaporizado",
+      ingredients: [CI.MILK],
     },
   },
 } as const;

@@ -41,6 +41,7 @@ export enum CoffeeIngredients {
   COCOA_POWDER,
   CINNAMON_POWDER,
   MILK,
+  TONIC,
   COFFEE,
   ICE_CREAM,
 }
