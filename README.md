@@ -1,4 +1,4 @@
-Hi! That's the menu of my homebar and coffee shop.
+Hi! That's the menu of my homebar and cafe.
 
 font geral: DIN / Barlow (google)
 
